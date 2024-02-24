@@ -1,0 +1,31 @@
+composer global require laravel/installer
+composer create-project laravel/laravel:^8.0 demo_magang80
+
+php artisan make:auth
+php artisan migrate
+
+
+composer create-project laravel/laravel:8.6.11 demo_magang
+composer create-project laravel/laravel example-app
+
+https://dummyjson.com/products
+
+composer create-project --prefer-dist laravel/laravel:8.6.11 demo_magang
+php artisan make:migration create_users_table
+php artisan make:migration create_posts_table
+php artisan make:controller AdminController
+php artisan migrate
+php artisan make:seeder UsersTableSeeder
+php artisan make:seeder PostsTableSeeder
+php artisan view:clear
+
+
+php artisan route:clear
+php artisan cache:clear
+php artisan config:cache
+
+
+
+zip -r 20231002_demo_magang.zip ./DOT_Indonesia_laravel/
+Compress-Archive -Path .\DOT_Indonesia_laravel -DestinationPath 20231002_demo_magang.zip
+https://dbdiagram.io/d/demo_app-6519aafaffbf5169f0d287f1
